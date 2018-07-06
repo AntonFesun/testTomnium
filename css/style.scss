@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.container {
+  max-width: 835px;
+  padding: 10px;
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    &-image {
+      margin-right: 57px;
+
+      &-socials {
+        display: none;
+      }
+    }
+
+    &-name_item {
+      font-family: Oswald;
+      text-transform: uppercase;
+      color: #2c303d;
+      font-size: 24.02px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    &-description {
+
+      &-id {
+        font-family: OpenSans;
+        color: #2c303d;
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 16px;
+      }
+
+      &-price {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 177px;
+        justify-content: space-between;
+
+        &-old {
+          font-family: OpenSans;
+          color: #2c303d;
+          font-size: 24px;
+          font-weight: 700;
+          text-decoration-line: line-through;
+        }
+
+        &-new {
+
+          font-family: OpenSans;
+          color: #ce2c52;
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+      }
+
+      &-rate {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+
+        &-stars {
+          width: 110px;
+          height: 40px;
+          margin-right: 16px;
+        }
+
+        &-socials {
+          margin-right: 73px;
+          cursor: pointer;
+          position: relative;
+
+          &-links {
+            font-family: OpenSans;
+            color: #2c87ce;
+            font-size: 18px;
+            font-weight: 700;
+            height: 40px;
+            line-height: 40px;
+          }
+
+          &-popup {
+            position: absolute;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            background: #fff;
+            padding: 26px 20px 25px 18px;
+            display: none;
+            align-items: center;
+            top: 41px;
+            left: -113px;
+
+            &::after {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background: #fff;
+              position: absolute;
+              top: -5px;
+              left: calc(50% - 5px);
+              transform: rotate(-45deg);
+              box-shadow: 2px -2px 5px -2px rgba(0, 0, 0, 0.75);
+            }
+
+            a {
+              margin-right: 13px;
+            }
+          }
+        }
+      }
+
+      &-sizes {
+        margin-top: 10px;
+        display: flex;
+
+        &-name {
+          font-family: OpenSans;
+          color: #2c303d;
+          font-size: 14px;
+          font-weight: 700;
+          margin-right: 36px;
+          position: relative;
+          width: 36px;
+
+          span {
+            position: relative;
+            top: calc(50% - 9.5px);
+            width: 100%;
+          }
+        }
+
+        &-allsizes {
+          display: flex;
+          width: 140px;
+
+          &-select {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgb(215, 215, 215);
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            text-align: center;
+            margin-right: 13px;
+            cursor: pointer;
+            line-height: 34px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            span {
+              position: relative;
+              top: calc(50% - 9.5px);
+            }
+          }
+        }
+      }
+
+      &-colors {
+        display: flex;
+        margin-top: 12px;
+
+        &-name {
+          font-family: OpenSans;
+          color: #2c303d;
+          font-size: 14px;
+          font-weight: 700;
+          text-transform: uppercase;
+          position: relative;
+          margin-right: 15px;
+
+          span {
+            position: relative;
+            top: calc(50% - 9.5px);
+          }
+        }
+
+        &-box {
+          display: flex;
+
+          &-element {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin-right: 7px;
+            cursor: pointer;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .blue {
+            background-color: rgb(134, 212, 228);
+          }
+
+          .green {
+            background-color: rgb(148, 200, 145);
+          }
+
+          .red {
+            background-color: rgb(200, 142, 158);
+          }
+
+          .violet {
+            background-color: rgb(169, 140, 205);
+          }
+        }
+      }
+
+      &-add-to-cart {
+        margin-top: 11px;
+        background-color: #8ae6cf;
+        width: 214px;
+        height: 44px;
+        border: none;
+        border-radius: 50px;
+        font-family: OpenSans;
+        color: #2c303d;
+        font-size: 13.99px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten(#8ae6cf, 10%);
+          transition-duration: 0.2s;
+        }
+
+        &:active {
+          -webkit-transform: scale(1.01);
+          -moz-transform: scale(1.01);
+          -ms-transform: scale(1.01);
+          -o-transform: scale(1.01);
+          transform: scale(1.01);
+          transition-duration: 0.2s;
+        }
+      }
+    }
+  }
+
+  &-products {
+    margin-top: 67px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-title {
+      font-family: OpenSans;
+      color: #2c303d;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    &-list-box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 835px;
+
+      &-item {
+
+        cursor: pointer;
+
+        &-img-cont {
+          position: relative;
+
+          img {
+            width: 265px;
+            height: 265px;
+          }
+
+          &-price {
+            position: absolute;
+            padding: 4px 10px;
+            bottom: 26px;
+            box-sizing: border-box;
+            background-color: rgb(145, 228, 204);
+            max-width: 148px;
+            min-width: 63px;
+            right: 0;
+
+            &-old {
+              color: rgb(31, 33, 58);
+              text-decoration-line: line-through;
+            }
+
+            &-new {
+              margin-left: 10px;
+              color: rgb(196, 27, 79);
+            }
+
+            .static {
+              color: rgb(31, 33, 58);
+            }
+          }
+        }
+
+        &-name {
+          margin-top: 14px;
+          margin-bottom: 25px;
+
+          p {
+            text-align: center;
+            font-family: OpenSans;
+            color: #282828;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.active {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+@import "rate";
+@import "media";
